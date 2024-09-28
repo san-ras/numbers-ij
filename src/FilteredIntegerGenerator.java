@@ -4,10 +4,10 @@ import lt.itakademija.exam.NumberFilter;
 public class FilteredIntegerGenerator implements IntegerGenerator {
 
     private final NumberFilter numberFilter;
-    private final IntegerGeneratorImpl integerGenerator;
+    private final IntegerGenerator integerGenerator;
 
     public FilteredIntegerGenerator(IntegerGenerator integerGenerator, NumberFilter numberFilter) {
-        this.integerGenerator = (IntegerGeneratorImpl) integerGenerator;
+        this.integerGenerator = integerGenerator;
         this.numberFilter = numberFilter;
     }
 
