@@ -65,13 +65,7 @@ public class ExercisesImpl implements Exercises {
     public Map<Integer, Integer> countOccurrences(List<Integer> list) {
         Map<Integer, Integer> map = new HashMap<>();
         for (Integer integer : list) {
-            if (!map.containsKey(integer)) {
-                map.put(integer, 1);
-            } else {
-             int value = map.get(integer);
-             value++;
-             map.put(integer, value);
-            }
+            map.put(integer, map.getOrDefault(integer, 0) + 1);
         }
         return map;
     }
